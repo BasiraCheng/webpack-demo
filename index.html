@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>个人简历</title>
+  <script src="//at.alicdn.com/t/font_1116855_xr7uagwvajk.js"></script>
+  <style type="text/css">
+    .loading{width: 200px;height: 200px;position: relative;}
+
+    .loading::before,
+    .loading::after {content: ''; position: absolute; width: 0px; height: 0px;}
+    .loading::after { animation-delay: 0.75s;}
+
+    @keyframes s {
+      0% {width: 0px; height: 0px; opacity: 1;}
+      100% { width: 100px; height: 100px; opacity: 0;}
+    }
+
+    .icon {width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}
+
+    .site-welcome {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #888; z-index: 1; justify-content: center; align-items: center;}
+
+    .site-welcome.active {display: flex;}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div id="topNavBar" class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float: left;">
+        <span class="rs">RS</span>
+        <span class="card">card</span>
+      </a>
+      <nav class="menu" style="float: right;">
+        <ul class="clearfix">
+          <li>
+            <a href="#siteAbout">关于</a>
+          </li>
+          <li><a href="#siteSkills">技能</a>
+          </li>
+          <li>
+            <a href="#siteWorks">作品</a>
+            <ul class="submenu">
+              <li>作品1</li>
+              <li>作品2</li>
+              <li>作品3</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">博客</a>
+            <ul class="submenu">
+              <li>博客1</li>
+              <li>博客2</li>
+              <li>博客3</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">日历</a>
+          </li>
+          <li>
+            <a href="#">联系方式</a>
+          </li>
+          <li>
+            <a href="#">其他</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main>
+
+
+    <div data-x id="siteAbout" class="userCard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
+        </div>
+        <div class="text">
+          <span class="welcome">Hello
+            <span class="triangle"></span>
+          </span>
+          <h1>成不贤</h1>
+          <p>自由职业</p>
+          <hr>
+          <dl>
+            <dt>年龄</dt>
+            <dd>18</dd>
+            <dt>所在城市</dt>
+            <dd>广州</dd>
+            <dt>邮箱</dt>
+            <dd>2249639871@qq.com</dd>
+            <dt>手机</dt>
+            <dd>16620011756</dd>
+          </dl>
+        </div>
+      </div>
+      <footer class="media">
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-Clip"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+    <p class="downloadResume-wrapper">
+      <a class="downloadResume" href="./resume.pdf" target="blank" download>下载 PDF 简历</a>
+    </p>
+    <p class="selfIntroduction">
+      成不贤， 自由职业，现在在 饥人谷 学习前端课程。<br>
+      技能：前端开发，Rails 开发，Node.js 开发
+    </p>
+
+  </main>
+  <section data-x id="siteSkills" class="skills">
+    <h2>技能</h2>
+    <ol class="clearfix">
+      <li>
+        <h3>
+          HTML 5 &amp; CSS 3
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 20%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          JavaScript
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 30%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          jQuery
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 50%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Vue.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 20%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          React.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 30%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Node.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 60%"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section data-x class="portfolio" id="siteWorks">
+    <h2>作品集</h2>
+ 
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <img src="./img/works/nav-page.jpg" class="swiper-slide">
+        <img src="./img/works/canvas.jpg" class="swiper-slide">
+        <img src="./img/works/apple-style-slide-show.jpg" class="swiper-slide">
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+    
+    </div>
+    <!--If we need navigation buttons-->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+  <script>
+    console.log(window.Swiper)
+    var mySwiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  </script>
+  <script>
+    let specialTags = document.querySelectorAll('[data-x]') // 添加offset类
+    for (let i = 0; i < specialTags.length; i++) {
+      specialTags[i].classList.add('offset')
+    }
+    findClosest()
+    window.onscroll = function (xxxxx) {
+      if (window.scrollY > 0) {
+        topNavBar.classList.add('sticky')
+      } else {
+        topNavBar.classList.remove('sticky')
+      }
+      findClosest()
+    }
+    function findClosest() {
+      let specialTags = document.querySelectorAll('[data-x]')
+      let minIndex = 0
+      for (let i = 1; i < specialTags.length; i++) {
+        if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+          minIndex = i // minIndex就是离窗口顶部最近的元素
+        }
+      }
+      specialTags[minIndex].classList.remove('offset')
+      let id = specialTags[minIndex].id
+      let a = document.querySelector('a[href="#' + id + '"]')
+      let li = a.parentNode
+      let brotherAndMe = li.parentNode.children
+      for (let i = 0; i < brotherAndMe.length; i++) {
+        brotherAndMe[i].classList.remove('highlight')
+      }
+      li.classList.add('highlight')
+    }
+
+    let liTags = document.querySelectorAll('nav.menu > ul > li')
+    for (let i = 0; i < liTags.length; i++) {
+      liTags[i].onmouseenter = function (x) {
+        x.currentTarget.classList.add('active')
+      }
+      liTags[i].onmouseleave = function (x) {
+        x.currentTarget.classList.remove('active')
+      }
+    }
+    let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onclick = function (x) {
+        x.preventDefault() // 阻止默认动作
+        let a = x.currentTarget // 获取a标签
+        let href = a.getAttribute('href') // 获取a标签上面写的href的原文
+        let element = document.querySelector(href) // 根据href得到我们的元素
+        let top = element.offsetTop // 通过element得到距离页面顶部的距离 // 以上四句话等于let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop
+
+        let currentTop = window.scrollY // 求出当前Top
+        let targetTop = top - 80 // 求出目标Top
+        let s = targetTop - currentTop // 求出总的路程s
+        var coords = { y: currentTop }; // 起始位置：当前坐标：y，
+        var t = Math.abs((s / 100) * 300) // 总的时间是s/100)*300的绝对值
+        if (t > 500) { t = 500 } // 当时间大于500，我们就让它等于500
+        var tween = new TWEEN.Tween(coords) // 起始位置
+          .to({ y: targetTop }) // 结束位置和时间
+          .easing(TWEEN.Easing.Quadratic.InOut) // 缓动类型：淡入淡出
+          .onUpdate(function () { // coords.y已经变了
+            window.scrollTo(0, coords.y) // 如何更新界面
+          })
+          .start(); // 开始缓动
+      }
+    }
+    var coords = { x: 0, };
+    var tween = new TWEEN.Tween(coords)
+      .to({ x: 1000 }, 1000)
+      .easing(TWEEN.Easing.Quadratic.In)
+      .onUpdate(function () {
+
+      })
+      .start();
+  </script>
+</body>
+
+</html>
