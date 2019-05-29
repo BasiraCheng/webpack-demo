@@ -2,15 +2,15 @@
     var view = document.querySelector('section.message')
     var model = {
         init: function () {
-            var APP_ID = 'NnEiAumXxdHop6QNEgU15OhO-gzGzoHsz';
-            var APP_KEY = 'eElfxcr6rtpBg3hoYMgi64OJ';
-            AV.init({ appId: APP_ID, appKey: APP_KEY });
+            var APP_ID = 'IYUDBJIQl5x0amh9G0CbRNOY-gzGzoHsz';
+            var APP_KEY = 'lVOxF7cGmvxyCIy6oUiFpcWI';
+            AV.init({appId: APP_ID, appKey: APP_KEY})
         },
-        fetch: function(){
+        fetch: function () {
             var query = new AV.Query('Message');
             return query.find()
         },
-        save: function(name, content){
+        save: function (name, content) {
             var Message = AV.Object.extend('Message');
             var message = new Message();
             return message.save({
@@ -21,11 +21,12 @@
     }
     var controller = {
         view: null,
+        model: null,
         messageList: null,
-        init: function (view,model) {
+        init: function (view, model) {
             this.view = view
             this.model = model
-          
+
             this.messageList = view.querySelector('#messageList')
             this.form = view.querySelector('form')
             this.model.init()
@@ -38,6 +39,7 @@
                 (messages) => {
                     let array = messages.map((item => item.attributes))
                     array.forEach((item) => {
+                        console.log('here')
                         let li = document.createElement('li')
                         li.innerText = `${item.name}: ${item.content}`
                         this.messageList.appendChild(li)
@@ -46,7 +48,7 @@
             )
         },
         bindEvents: function () {
-            this.form.addEventListener('submit', function (e) {
+            this.form.addEventListener('submit', (e) => {
                 e.preventDefault()
                 this.saveMessage()
             })
@@ -65,6 +67,5 @@
             })
         }
     }
-    controller.init(view,model)
+    controller.init(view, model)
 }.call()
-
